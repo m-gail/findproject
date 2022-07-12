@@ -4,7 +4,7 @@ findproject allows you to quickly navigate to your projects. The directories con
 
 ## Installation
 
-Install ![fzf](https://github.com/junegunn/fzf) as a fuzzy finder.
+Install [fzf](https://github.com/junegunn/fzf) as a fuzzy finder.
 
 Clone the repository, then install it with pip:
 
@@ -25,7 +25,7 @@ alias fp=". fp"
 
 The configuration file is located at `~/.config/findproject/config.json` and looks like this:
 
-```
+```json
 {
     "project_dirs": [
         {
