@@ -1,0 +1,6 @@
+cd "$(/bin/python3 -m findproject.projects | fzf)"
+
+for project in $(/bin/python3 -m findproject.activate.list $(pwd)) 
+do
+    source $project
+done
