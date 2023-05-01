@@ -13,6 +13,7 @@ setup(
         "Programming Language :: Python :: 3"
     ],
     scripts=[
-        "scripts/fp"
+        "scripts/fp",
+        "scripts/fp_tmux"
     ],
 )
