@@ -6,20 +6,23 @@ findproject allows you to quickly navigate to your projects. The directories con
 
 Install [fzf](https://github.com/junegunn/fzf) as a fuzzy finder.
 
-Clone the repository, then install it with pip:
+Clone the repository, then create a single executable with zipapp and move it to `.local/bin`. Make sure `.local/bin` is in your path.
 
 ```
-git clone https://gitlab.com/ihciM/findproject
-pip3 install -e ./findproject
+git clone https://github.com/m-gail/findproject
+cd findproject
+python3 -m zipapp findproject -p "/usr/bin/env python3"
+mv findproject.pyz ~/.local/bin/findproject
 ```
 
-Make sure the `fp` script provided by the python package (typically located at `~/.local/bin/fp`) is in your path.
-
-To be able to change the directory, the script has to be sourced, for easier usage, the following alias is recommended:
+You can then use findproject like this:
 
 ```
-alias fp=". fp"
+findproject list
+findproject active /home/username/path/to/project
 ```
+
+Or copy one of the scripts (`scripts/fp`, `scripts/fp_tmux`) to `.local/bin` and use it instead.
 
 ## Configuration
 

@@ -1,8 +1,8 @@
 import sys
 
-from findproject.activate.python_venv import activate_pipenv
-from findproject.activate.shell import activate_clear
-from findproject.config import load_config
+from activate.python_venv import activate_pipenv
+from activate.shell import activate_clear
+from config import load_config
 
 
 def print_activate_scripts(project):

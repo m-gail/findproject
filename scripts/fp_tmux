@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-selected="$(/bin/python3 -m findproject.projects | fzf)"
+selected="$(findproject list | fzf)"
 
 if [[ -z $selected ]]; then
     exit 0
@@ -10,7 +10,7 @@ selected_name=$(basename $(dirname "$selected" | tr . _))/$(basename "$selected"
 tmux_running=$(pgrep tmux)
 
 if [[ -z $tmux_running ]]; then
-    tmux new-session -ds $selected_name -c $selected
+    tmux new-session -s $selected_name -c $selected
     exit 0
 fi
 

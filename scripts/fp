@@ -1,6 +1,8 @@
-cd "$(/bin/python3 -m findproject.projects | fzf)"
+#!/usr/bin/env bash
 
-for project in $(/bin/python3 -m findproject.activate.list $(pwd)) 
+cd "$(findproject | fzf)"
+
+for project in $(findproject activate $(pwd))
 do
     source $project
 done
