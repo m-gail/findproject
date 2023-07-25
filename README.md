@@ -47,6 +47,9 @@ The configuration file is located at `~/.config/findproject/config.json` and loo
             ]
         }
     ],
+    "additional_projects": [
+        "/path/to/a/project"
+    ],
     "activate_builtin": [
         "pipenv",
         "clear"
@@ -59,5 +62,7 @@ The configuration file is located at `~/.config/findproject/config.json` and loo
 `exclude` contains subdirectories that should not appear in fzf.
 
 `subdirs` contains subdirectories, which are not projects themselves, but contain more projects.
+
+`additional_projects` adds directories directly to the output, instead of checking for subdirectories in it
 
 `activate_builtin` specifies scripts that should be run after changing the directory.
